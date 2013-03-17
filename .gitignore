@@ -1,2 +1,5 @@
 # Mind maps
 *.mm
+
+# log files
+*.log
