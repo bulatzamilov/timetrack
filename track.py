@@ -21,7 +21,7 @@ def help():
     Usage: ./timetrack TASK_NAME
     """ 
 
-def main():
+def log_write():
     """Reads arguments and puts time stamps into timelog.log"""
     if len(argv) == 1 or len(argv) > 2:
         help()
@@ -34,4 +34,4 @@ def main():
         log.close()
 
 if __name__ == '__main__':
-    main()
+    log_write()
