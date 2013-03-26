@@ -27,7 +27,20 @@ def log_write():
         help()
     else:
         delimiter = '#'
-        log = open('timelog.log', 'a+') # mode - append with multiple option of reading
+
+## todo 
+#   Create config file with option to choose the way to store activity
+#   For now it is log file only
+#   But there'l be different ways - mongodb, mysql, logfile
+##
+        try:
+            log = open('timelog.log', 'a+') # mode - append with multiple option of reading
+        except IOError:
+            print "Log file doesn't exist"
+        else: 
+            pass
+
+
         # log.seek(0,2)
         log.write(str(int(floor(time()))) + '\n')
         log.write(argv[1] + delimiter + str(int(floor(time()))) + delimiter)
